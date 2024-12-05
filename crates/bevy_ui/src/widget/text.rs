@@ -101,7 +101,7 @@ pub struct TextBundle {}
 ///     TextLayout::new_with_justify(JustifyText::Center)
 /// ));
 /// ```
-#[derive(Component, Debug, Default, Clone, Deref, DerefMut, Reflect)]
+#[derive(Component, Debug, Default, Clone, Deref, DerefMut, Reflect, PartialEq)]
 #[reflect(Component, Default, Debug)]
 #[require(Node, TextLayout, TextFont, TextColor, TextNodeFlags, ContentSize)]
 pub struct Text(pub String);
