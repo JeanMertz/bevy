@@ -40,7 +40,7 @@ impl LayoutRect {
     fn new(trans: &GlobalTransform, node: &ComputedNode, scale: f32) -> Self {
         let mut this = Self {
             pos: trans.translation().xy() * scale,
-            size: node.size() * node.inverse_scale_factor() * scale,
+            size: node.size() * scale,
         };
         this.pos -= this.size / 2.;
         this
